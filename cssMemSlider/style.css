@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.slider-middle {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: black;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-container {
+  max-height: 600px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-img {
+  height: 100%;
+}
+
+.radio-container {
+  height: 30px;
+  display: flex;
+}
+
+input {
+  display: none;
+}
+
+.label {
+  display: none;
+}
+
+.label-button {
+  height: 30px;
+  width: 30px;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-button:hover {
+  cursor: pointer;
+}
+
+.label-button:hover > span {
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.label-button > span {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 2px solid green;
+  border-radius: 50%;
+}
+
+#r1:checked ~ .wrapper > .slider-middle > .im1 {
+  margin-left: 0;
+}
+
+#r1:checked ~ .wrapper > .label-and-radio > .label-container > .label-1,
+#r2:checked ~ .wrapper > .label-and-radio > .label-container > .label-2,
+#r3:checked ~ .wrapper > .label-and-radio > .label-container > .label-3,
+#r4:checked ~ .wrapper > .label-and-radio > .label-container > .label-4 {
+  display: block;
+  animation: move 0.5s 1;
+}
+
+#r2:checked ~ .wrapper > .slider-middle > .im1 {
+  margin-left: -105%;
+}
+#r3:checked ~ .wrapper > .slider-middle > .im1 {
+  margin-left: -200%;
+}
+#r4:checked ~ .wrapper > .slider-middle > .im1 {
+  margin-left: -300%;
+}
+
+.label-and-radio {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+}
+
+@keyframes move {
+  from {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
