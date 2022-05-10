@@ -95,21 +95,17 @@ input {
 
 #r1:checked ~ .wrapper > .slider-middle > .im1 {
   margin-left: 0;
-  z-index: 1;
 }
 
 #r2:checked ~ .wrapper > .slider-middle > .im1 {
   margin-left: -100%;
-  z-index: 1;
 }
 
 #r3:checked ~ .wrapper > .slider-middle > .im1 {
   margin-left: -200%;
-  z-index: 1;
 }
 #r4:checked ~ .wrapper > .slider-middle > .im1 {
   margin-left: -300%;
-  z-index: 1;
 }
 
 .label-and-radio {
